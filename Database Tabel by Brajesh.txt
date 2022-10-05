@@ -1,0 +1,64 @@
+create table student (roll int primary key auto_increment, name varchar(30),marks int ,email varchar(40),password varchar(20));
+
+create table course ( cid int primary key auto_increment, cname varchar(20), fee int);
+
+create table course_student ( 
+roll int ,
+cid int,
+foreign key (roll) references student(roll) on delete cascade on update cascade,
+foreign key (cid) references course(cid) on delete cascade on update cascade);
+
+
+
+
+
+mysql> desc student;
++----------+-------------+------+-----+---------+----------------+
+| Field    | Type        | Null | Key | Default | Extra          |
++----------+-------------+------+-----+---------+----------------+
+| roll     | int         | NO   | PRI | NULL    | auto_increment |
+| name     | varchar(30) | YES  |     | NULL    |                |
+| marks    | int         | YES  |     | NULL    |                |
+| email    | varchar(40) | YES  |     | NULL    |                |
+| password | varchar(20) | YES  |     | NULL    |                |
++----------+-------------+------+-----+---------+----------------+
+5 rows in set (0.01 sec)
+
+mysql> desc course;
++-------+-------------+------+-----+---------+----------------+
+| Field | Type        | Null | Key | Default | Extra          |
++-------+-------------+------+-----+---------+----------------+
+| cid   | int         | NO   | PRI | NULL    | auto_increment |
+| cname | varchar(20) | YES  |     | NULL    |                |
+| fee   | int         | YES  |     | NULL    |                |
++-------+-------------+------+-----+---------+----------------+
+3 rows in set (0.00 sec)
+
+mysql> desc course_student;
++-------+------+------+-----+---------+-------+
+| Field | Type | Null | Key | Default | Extra |
++-------+------+------+-----+---------+-------+
+| roll  | int  | YES  | MUL | NULL    |       |
+| cid   | int  | YES  | MUL | NULL    |       |
++-------+------+------+-----+---------+-------+
+2 rows in set (0.00 sec)
+
+mysql>
+
+
+
+
+
+
+
+
+
+
+
+
+                                               APNA COUCHANIG
+
+
+
+
+

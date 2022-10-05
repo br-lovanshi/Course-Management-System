@@ -1,0 +1,15 @@
+1. Time Complacity,
+2. Arrays,
+3. String,
+4. Stack,
+5.que,
+6.LinkedList
+7.2D Array
+
+
+
+----------------------------------------------======================----------
+
+two pointer,sliding window,bubble sort,merge sort
+
+
